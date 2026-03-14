@@ -1,0 +1,29 @@
+# Compiled Object files
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic & Static libraries
+*.so
+*.dylib
+*.dll
+*.a
+*.lib
+
+# Executables / Binaries
+*.out
+*.exe
+*.app
+
+# OS generated files (good to have just in case)
+.DS_Store
+Thumbs.db
+
+# Editor / IDE specific files (VS Code, Vim, etc.)
+.vscode/
+.idea/
+*.swp
+*~
