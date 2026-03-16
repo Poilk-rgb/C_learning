@@ -1,7 +1,7 @@
 //Turtle graphics
 #include <stdio.h>
 
-//enum Pen {UP, DOWN};
+enum Pen {UP, DOWN};
 enum Status {NORTH, EAST, SOUTH, WEST};
 
 int main(void)
@@ -12,9 +12,9 @@ int main(void)
     int location_row = 49;
     int location_column = 0;
     int destination = 0;
-    int pen_up = 1;
+    //int pen_up = 1;
     enum Status turtle_direction = NORTH;
-    //enum Pen pen_status = DOWN;
+    enum Pen pen_status = DOWN;
     
     while(command != 9){
         printf("Enter the command: ");
@@ -23,15 +23,15 @@ int main(void)
         switch (command)
         {
             case 1: 
-                if(pen_up != 1){
-                    pen_up = 1;
+                if(pen_status != UP){
+                    pen_status = UP;
                 }
                 printf("Pen status: UP\n");
                 break;
                 
             case 2:
-                if(pen_up != 0){
-                    pen_up = 0;
+                if(pen_status != DOWN){
+                    pen_status = DOWN;
                 }
                 printf("Pen status: DOWN\n");
                 break;
