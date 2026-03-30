@@ -19,21 +19,21 @@ int main(void){
     int nextColumn = 0;
     int potentialRow = 1;
     int potentialColumn = 1;
-    int currentRow = 0;
-    int currentColumn = 0;
+    int store_currentRow = 0;
+    int store_currentColumn = 0;
     int moveNumber = 0;
     int lowest = 20;
     
         for (size_t c = 1; c < 64; c++){
             for (size_t moveNumber = 0; moveNumber < 8; moveNumber++){
-                currentRow = potentialRow;
-                currentColumn = potentialColumn; 
+                store_currentRow = potentialRow;
+                store_currentColumn = potentialColumn;
                 potentialRow += vertical[moveNumber];
                 potentialColumn += horizontal[moveNumber];
-                if(currentRow > 7 || currentRow < 0 || currentColumn > 7 
-                        || currentColumn < 0 || board[currentRow][currentColumn] == 1){
-                        potentialRow = currentRow;
-                        potentialColumn = currentColumn;
+                if(potentialRow > 7 || potentialRow < 0 || potentialColumn > 7 
+                        || potentialColumn < 0 || board[potentialRow][potentialColumn] == 1){
+                        potentialRow = store_currentRow;
+                        potentialColumn = store_currentColumn;
                         continue;
                 } 
                 else {
