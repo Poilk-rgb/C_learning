@@ -17,6 +17,7 @@
 *.out
 *.exe
 *.app
+*.bin
 
 # OS generated files (good to have just in case)
 .DS_Store
